@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Balon de oro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Balon de oro</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/nominados">Ganadores <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/listar_equipos">Equipos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/listar_jugadores">Jugadores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/carrito">Tienda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/usuario/registrar">Registrarse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Iniciar Sesion</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %} 
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-z5C4cXN9DA5JIJ7LV85W7wzBihjB5T5fWj27brg1np8ZhgO7rN+g60z4c09tkCT+" crossorigin="anonymous"></script>
+</body>
+</html>
+

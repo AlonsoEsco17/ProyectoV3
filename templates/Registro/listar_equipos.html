@@ -1,0 +1,46 @@
+{% extends 'Registro/base.html' %}
+
+{% block titulo_principal %}
+
+<div id=titulo_pagina>
+    Lista de equipos Registradas
+</div>
+{% endblock %} 
+{% block content %} 
+
+    
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Pais</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for e in equipos %}
+        <tr>
+            <th scope="row">{{ e.nombre }} </th>
+            <td>{{ e.pais }}</td>
+            <td><a class="btn btn-primary" href="editar_equipo/{{e.id}}">Editar</a></td>
+            <td><a class="btn btn-danger" href="borrar_equipo/{{e.id}}">Eliminar</a></td>
+        </tr>
+
+            
+            
+            
+        </tr>
+        {% endfor %}
+        <a class="btn btn-primary" href="agregar_equipo">Añadir</a>
+
+
+        {%endblock%}
+    </tbody>
+</table>
+
+
+
+

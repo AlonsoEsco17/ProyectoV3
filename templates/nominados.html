@@ -1,0 +1,46 @@
+{% extends 'Registro/base.html' %} 
+{%load static%}
+{%block content%}
+<body>
+    <div class="container">
+      <div class="person">
+          <div class="info">
+              <h1>Lionel Messi</h1>
+              <h3>Temporada 2022/2023</h3>
+          </div>
+        <img class="imagen" src="{% static 'img/messi2023.webp'%}" alt="Messi" />
+      </div>
+
+      <div class="person">
+          <div class="info">
+              <h1>Karim Benzema</h1>
+              <h3>Temporada 2021/2022</h3>
+            </div>
+        <img class="imagen" src="{% static 'img/benzema2022.jpg'%}" alt="Benzema" />
+        
+      </div>
+      <div class="person">
+          <div class="info">
+              <h1>Lionel Messi</h1>
+              <h3>Temporada 2020/2021</h3>
+          </div>
+          <img class="imagen" src="{% static 'img/messi2021.webp'%}" alt="Messi" />
+      </div>
+
+      <div class="person">
+          <div class="info">
+              <h1>Lionel Messi</h1>
+              <h3>Temporada 2018/2019</h3>
+          </div>
+          <img class="imagen" src="{% static 'img/messi2019.webp'%}" alt="Messi" />
+      </div>
+
+      <div class="person">
+          <div class="info">
+              <h1>Luka Modric</h1>
+              <h3>Temporada 2017/2018</h3>
+          </div>
+          <img class="imagen" src="{% static 'img/modric2018.webp'%}" alt="Modric" />
+      </div>
+  </body>
+{%endblock%}

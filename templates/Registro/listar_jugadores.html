@@ -1,0 +1,43 @@
+{% extends 'Registro/base.html' %}
+
+{% block titulo_principal %}
+
+<div id=Lista_Jugadores>
+    Lista de Jugadores Registrados
+</div>
+{% endblock %} 
+{% block content %} 
+
+    
+
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Años</th>
+            <th>Club</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for j in jugadores %}
+        <tr>
+            <th scope="row">{{ j.nombre }} </th>
+            <td>{{ j.apellido }}</td>
+            <td>{{ j.edad }}</td>
+            <td>{{ j.equipo }}</td>
+            <td><a class="btn btn-primary" href="editar_jugador/{{j.id}}">Editar</a></td>
+            <td><a class="btn btn-danger" href="borrar_jugador/{{j.id}}">Eliminar</a></td>
+        </tr>
+
+            
+            
+            
+        </tr>
+        {% endfor %}
+
+        <a class="btn btn-primary"href="agregar_jugador">Añadir</a>
+        {%endblock%}
+    </tbody>
+</table>
